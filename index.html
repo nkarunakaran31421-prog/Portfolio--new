@@ -1,23 +1,84 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Student Management System</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <h1>Student Management System</h1>
+  <div class="container">
 
-  <form>
-    <input type="text" placeholder="Student Name">
-    <input type="text" placeholder="Student ID">
-    <button type="submit">Add Student</button>
-  </form>
+    <header>
+      <h1>🎓 Student Management System</h1>
+      <p>Manage student records easily</p>
+    </header>
 
-  <h2>Student List</h2>
-<script src="script.js"></script>
+    <section class="form-card">
+
+      <h2>Add Student</h2>
+
+      <form id="studentForm">
+
+        <input
+          type="text"
+          id="studentName"
+          placeholder="Student Name"
+          required
+        >
+
+        <input
+          type="text"
+          id="studentId"
+          placeholder="Student ID"
+          required
+        >
+
+        <input
+          type="email"
+          id="studentEmail"
+          placeholder="Email"
+          required
+        >
+
+        <input
+          type="tel"
+          id="studentPhone"
+          placeholder="Phone Number"
+          required
+        >
+
+        <button type="submit">Add Student</button>
+
+      </form>
+
+    </section>
+
+    <section class="list-card">
+
+      <div class="list-header">
+        <h2>Student List</h2>
+
+        <span id="studentCount">0 Students</span>
+      </div>
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="🔍 Search student..."
+      >
+
+      <div id="studentList"></div>
+
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
