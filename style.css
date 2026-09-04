@@ -1,48 +1,92 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: Arial, sans-serif;
-  background: #f4f6f8;
-  margin: 0;
-  padding: 40px 20px;
-  text-align: center;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  color: #1e293b;
+  min-height: 100vh;
+  padding: 30px 16px;
 }
 
-h1 {
-  color: #222;
-  margin-bottom: 30px;
-}
-
-form {
-  background: white;
-  max-width: 500px;
+.container {
+  max-width: 900px;
   margin: auto;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-input {
-  width: 90%;
-  padding: 12px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 6px;
+header {
+  text-align: center;
+  margin-bottom: 25px;
 }
 
-button {
-  margin-top: 10px;
-  padding: 12px 25px;
+header h1 {
+  font-size: 38px;
+  color: #1e3a8a;
+  margin-bottom: 8px;
+}
+
+header p {
+  color: #64748b;
+}
+
+.form-card,
+.list-card {
+  background: white;
+  border-radius: 18px;
+  padding: 24px;
+  margin-bottom: 22px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.form-card h2,
+.list-card h2 {
+  margin-bottom: 16px;
+  color: #0f172a;
+}
+
+#studentForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+#studentForm input,
+#searchInput {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+}
+
+#studentForm input:focus,
+#searchInput:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+#studentForm button {
+  grid-column: 1 / -1;
+  padding: 13px;
   border: none;
-  border-radius: 6px;
-  background: #222;
+  border-radius: 10px;
+  background: #2563eb;
   color: white;
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
 }
 
-button:hover {
-  background: #444;
+#studentForm button:hover {
+  background: #1d4ed8;
 }
 
-h2 {
-  margin-top: 35px;
-}
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15
